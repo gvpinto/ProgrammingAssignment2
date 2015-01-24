@@ -1,7 +1,16 @@
-## Put comments here that give an overall description of what your
-## functions do
+## The makeCacheMatrix() function creates a special Matrix that wraps
+## the matrix with get() set() getInverse() and setInverse()
+## functions. 
+##
+## The cacheSolve() function takes in the special matrix defined
+## by makeCacheMatrix(), calculates the inverse of the matrix
+## and stores it in specialized matrix cache, if the cache is found empty 
+## and then returns the inverse of the matrix. Any repeated request  
+## to specialized matrix for the inverse returns the inverse from the cache
 
-## Write a short comment describing this function
+## makeCacheMatrix() function takes in a matrix and returns a specialized
+## matrix with get(), set(), getInverse() and setInverse()
+## functions
 
 makeCacheMatrix <- function(x = matrix()) {
     ## Inverse of the matrix x
@@ -32,7 +41,10 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## The cacheSolve() function takes in the specialized matrix and calculates
+## the inverse of the matrix. If the inverse is already found in the cache
+## it just returns the inverse matrix from the cache if not it will put the
+## calculated value in the cache
 
 cacheSolve <- function(x, ...) {
     ## Return a matrix that is the inverse of 'x'
